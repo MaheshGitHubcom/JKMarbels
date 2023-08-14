@@ -1,0 +1,371 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JK Granites</title>
+    <link rel="stylesheet" href="/Templates/CSS/style.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #f2f2f2;
+            border-radius: 15px;
+            padding: 50px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            /*  border: 1px solid rgba(0, 0, 0, 0.8);*/
+            /* border: 1px solid rgba(244, 198, 198, 0.8);*/
+            border: 1px solid #45a049;
+            border-radius: 10px 10px 10px 10px;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+
+        }
+
+        card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+            border: 3px solid #ef8421;
+        }
+
+
+        div.gallery {
+            border: 2px solid #777;
+        }
+
+        div.gallery:hover {
+            border: 3px solid #ef8421;
+            position: static;
+        }
+
+        div.gallery img {
+            width: 100%;
+            top: 10px;
+
+        }
+
+        div.gallery a img {
+            width: "500";
+            height: "200"
+        }
+
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+            font-size: small;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px 10px 10px;
+            float: left;
+            width: 24.99999%;
+
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+    </style>
+    <style>
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="/Templates/Images/Samplelogo-resized.jpg" class="logo">
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Products2.html">Products</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <hr color="orange">
+            </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img1.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Italian marble - 172 Rs per SqFt</div>
+
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img2.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img3.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img2.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img3.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img1.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img3.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img2.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="grid-item">
+            <a href="javascript:void(0)">
+                <img onclick="ShowImageModal(this)" src="/Templates/Images/Products/img1.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+        <!--<div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>-->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div style=" display:flex;width: 100%;">
+            <div style="display:flex;width: 50%;">Reach us :
+                1800-133-7777</div>
+            <div style="width: 50%; text-align :right;">© 2023 Mahaa Solutions ®</div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Get the modal
+        // var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        // var img = document.getElementById("myImg");
+        //var modalImg = document.getElementById("img01");
+        //var captionText = document.getElementById("caption");
+        //img.onclick = function () {
+        //    alert('')
+        //  modal.style.display = "block";
+        //modalImg.src = this.src;
+        //captionText.innerHTML = this.alt;
+        //}
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        function ShowImageModalDelay(id) {
+            setTimeout(ShowImageModal, 2000, id);
+        }
+        function ShowImageModal(id) {
+
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = id.src;
+            captionText.innerHTML = id.alt;
+        }
+    </script>
+</body>
+
+</html>
